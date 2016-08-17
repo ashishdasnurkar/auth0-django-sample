@@ -1,0 +1,3 @@
+django
+auth0-python
+dotenv
