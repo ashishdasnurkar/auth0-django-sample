@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auth0 + Django Webapp Seed + Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="{% static 'main/stylesheets/app.css' %}" />
+
+        <script>
+            var AUTH0_CLIENT_ID = '{{env.AUTH0_CLIENT_ID}}';
+            var AUTH0_DOMAIN = '{{env.AUTH0_DOMAIN}}';
+            var AUTH0_CALLBACK_URL = '{{env.AUTH0_CALLBACK_URL}}';
+        </script>
+        <script type="text/javascript" src="//cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
+        <script type="text/javascript" src="{% static 'main/javascripts/app.js' %}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">My Application</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">My Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    </body>
+</html>

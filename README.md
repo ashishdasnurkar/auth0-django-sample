@@ -7,6 +7,9 @@ You can learn more about the seed project and samples in the [Auth0 Django quick
 ### 00 - WebApp Seed
 Learn how to setup your application integrating Auth0 libraries and tools.
 
+### 01 - Login
+Learn how to add login capabilities to your Django application using the Auth0 Lock widget
+
 ## Used Libraries
 * [Auth0 Lock](https://github.com/auth0/lock)
 * [Auth0 Python SDK](https://github.com/auth0/auth0-python)

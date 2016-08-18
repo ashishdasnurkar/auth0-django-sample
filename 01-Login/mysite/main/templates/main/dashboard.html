@@ -1,0 +1,8 @@
+    {% extends "base.html" %}
+    {% block content %}
+    <section class="jumbotron text-center">
+        <h2><img class="jumbo-thumbnail" src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg"></h2>
+        <h1>Django Auth0 Sample</h1>
+        Welcome {{request.session.profile.name}}
+    </section>
+    {% endblock content %}
