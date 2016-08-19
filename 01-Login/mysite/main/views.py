@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from mysite import settings
 import requests
 import json
+
 # Create your views here.
 
 def home(request):
@@ -30,5 +31,8 @@ def callback(request):
     return redirect('/dashboard')
 
 def dashboard(request):
-    return render(request, "main/dashboard.html", {"env" : settings.env})
-
+    if request.session.get('profile'):
+        return render(request, "main/dashboard.html", {"env" : settings.env})
+    else:
+        return redirect('/home')
+    
