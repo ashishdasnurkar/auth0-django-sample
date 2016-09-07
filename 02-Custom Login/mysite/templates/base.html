@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Auth0 + Django Webapp Seed + 03 - Session Handling</title>
+        <title>Auth0 + Django Webapp Seed + 02 - Custom Login</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
@@ -13,7 +13,7 @@
             var AUTH0_DOMAIN = '{{env.AUTH0_DOMAIN}}';
             var AUTH0_CALLBACK_URL = '{{env.AUTH0_CALLBACK_URL}}';
         </script>
-        <script type="text/javascript" src="//cdn.auth0.com/js/lock/10.0.0/lock.min.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'main/javascripts/app.js' %}"></script>
     </head>
     <body>

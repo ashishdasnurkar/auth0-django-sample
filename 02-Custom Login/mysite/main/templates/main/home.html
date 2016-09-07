@@ -1,0 +1,28 @@
+    {% extends "base.html" %}
+    {% block content %}
+    <section class="jumbotron text-center">
+        <h2><img class="jumbo-thumbnail" src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg"></h2>
+        <h1>Django Auth0 Sample</h1>
+        <p>Step 2 - Custom Login.</p>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        {% if login_error %}<h4 style="color:red">{{ login_error}}</h4>{% endif%}
+        <form action="/login" method="POST" class="form-inline">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{form.user_email.label}}">Email</label>
+                    {{ form.user_email}}
+            </div>
+            <div class="form-group">
+                <label for="{{form.user_password.label}}">Password</label>
+                    {{ form.user_password}}
+            </div>
+            <div class="form-group">
+                <div>
+                    <button type="submit" class="btn btn-success">Sign in</button>
+                    <a href="/loginwithgoogle" class="btn btn-success">Login with Google</a>
+                </div>
+            </div>
+        </form>
+    </section>
+    {% endblock content %}
+    
